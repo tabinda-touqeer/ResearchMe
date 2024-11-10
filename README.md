@@ -226,4 +226,4 @@ Contributions are welcome! If you have suggestions for improving `researchme`, p
 
 ## License
 
-`researchme` is licensed under the MIT License. See the [LICENSE](https://github.com/tabinda-touqeer/ResearchMe/blob/main/LICENSE) file for more details.
+`researchme` is licensed under the MIT License. See the [LICENSE](https://github.com/tabinda-touqeer/ResearchMe/blob/main/LICENSE) for more details.
