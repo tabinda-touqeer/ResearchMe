@@ -2,7 +2,7 @@
 __all__ = ["Mirror1"]
 
 __author__ = "Tabinda Touqeer"
-__version__ = "0.1.0"
+__version__ = "0.1.2"
 __copyright__ = "Copyright (c) 2024 Tabinda Touqeer"
 # Use of this source code is governed by the MIT license.
 __license__ = "MIT"
@@ -135,7 +135,10 @@ class Mirror1:
                 # Retrieve the last link in the navigation tabs as JSON URL
                 json_link = nav_tabs.find_all('a', href=True)[-1]
                 href = json_link['href']
-                return 'https://libgen.li' + href
+                url = 'https://libgen.li' + href
+                response = requests.get(url)
+                response.raise_for_status()  # Raise an error for HTTP issues
+                return response.json()  # Parse and return the JSON response
         except requests.exceptions.RequestException as e:
             return e.response.text
 

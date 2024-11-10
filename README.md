@@ -67,6 +67,19 @@ for entry in metadata:
     print(entry)
 ```
 
+### Retrieving JSON Data
+
+The `get_json` method retrieves additional metadata in JSON format, allowing for easy access to fields such as MD5 hash or other metadata identifiers.
+
+```python
+# Retrieve JSON data from the initialized session
+json_data = mirror.get_json()
+
+# Access and print each item ID with its MD5 hash
+for item_id, item_data in json_data.items():
+    print(item_id, item_data['md5'])
+```
+
 In this example, the `search_categories` method constructs category-specific URL filters to narrow the search results to specific types of content.
 
 
@@ -127,6 +140,18 @@ Retrieves metadata from the previously initialized search results, including fie
 - **Returns**: A list of dictionaries, each containing metadata for an item found in the search results.
 
 ---
+
+#### `get_json()`
+
+Fetches and returns a formatted JSON representation of additional metadata if available. Each key in the JSON data represents an item ID, with values as dictionaries containing metadata fields, such as the MD5 hash.
+
+- **Parameters**: None
+
+- **Returns**: A dictionary in JSON format, where each key represents an item ID, and the value is a dictionary containing metadata details like `md5` and other fields.
+
+- **Example Usage**:
+
+ ---
 
 #### `resolve_download(url: str)`
 
@@ -201,4 +226,4 @@ Contributions are welcome! If you have suggestions for improving `researchme`, p
 
 ## License
 
-`researchme` is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+`researchme` is licensed under the MIT License. See the [LICENSE](https://github.com/tabinda-touqeer/ResearchMe/blob/main/LICENSE) file for more details.

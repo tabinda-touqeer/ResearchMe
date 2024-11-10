@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ResearchMe"
-version = "0.1.0"
+version = "0.1.2"
 description = "A Python library for programmatic access to Library Genesis"
 readme = "README.md"
 authors = [{name = "Tabinda Touqeer"}]
